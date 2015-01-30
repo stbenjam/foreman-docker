@@ -16,7 +16,7 @@ module Service
                                           :priority => environment_variable.priority
           end
         end
-        Taxonomy.enabled_taxonomies.each do |taxonomy|
+        enabled_taxonomies.each do |taxonomy|
           container.send(:"#{taxonomy}=", wizard_state.preliminary.send(:"#{taxonomy}"))
         end
 

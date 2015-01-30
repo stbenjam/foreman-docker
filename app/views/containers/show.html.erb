@@ -57,7 +57,7 @@
                 </table>
               </td>
             </tr>
-            <% Taxonomy.enabled_taxonomies.each do |taxonomy| %>
+            <% enabled_taxonomies.each do |taxonomy| %>
               <tr>
                 <td><%= _(taxonomy.humanize) %></td>
                 <td><%= link_to_taxonomies(@container.send(:"#{taxonomy}")).html_safe %> </td>

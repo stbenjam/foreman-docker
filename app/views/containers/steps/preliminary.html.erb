@@ -5,7 +5,7 @@
       <span class="glyphicon glyphicon-tasks"></span>
       <%= _("Compute resource") %>
     </a></li>
-    <% Taxonomy.enabled_taxonomies.each do |taxonomy| %>
+    <% enabled_taxonomies.each do |taxonomy| %>
       <li><a href="#<%= taxonomy %>" data-toggle="tab">
         <span class="glyphicon glyphicon-<%= taxonomy_icon(taxonomy) %>">
         </span>

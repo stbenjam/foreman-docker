@@ -1,4 +1,9 @@
 module ContainersHelper
+  # TODO: Remove me and use Taxonomy.enabled_taxonomies in Foreman >= 1.8
+  def enabled_taxonomies
+    %w(locations organizations).select { |taxonomy| SETTINGS["#{taxonomy}_enabled".to_sym] }
+  end
+
   def managed_icon(container, resource)
     icon_text(managed?(container, resource) ? 'check' : 'unchecked')
   end
